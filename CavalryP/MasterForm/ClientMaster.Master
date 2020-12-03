@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMaster.master.cs" Inherits="CavalryP.MasterForm.ClientMaster" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+        }
+        .footersplit {
+            bottom:0;
+            position: fixed;
+            z-index: 1;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .footerleft {
+            bottom:0;
+            left: 0;
+            background-color:#5D7B9D;
+            height:165px;
+            width:15%;
+        }
+        .footerright {
+            bottom:0;
+            right: 0;
+            background-color:#5D7B9D;
+            height:165px;
+            width:85%;
+        }
+        .footercentered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .footerimg {
+            width: 90%;
+            height: auto;
+        } 
+        * {
+            box-sizing: border-box;
+        }      
+        .column {
+            float: left;
+            padding: 10px;
+            height:70px;
+            background-color: #e7e7e7;
+        }
+        .left, .right {
+            width: 7%;
+        }
+        .middle {
+            width: 93%;
+        }
+        .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            overflow: hidden;
+            background-color: #e7e7e7;
+        }
+        .button {
+            background-color: #e7e7e7;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: #5D7B9D;
+            color:white
+        }
+    </style>
+    </head>
+    <body>
+    <form id="form1" runat="server">
+        <div class="row">
+            
+            <div class="column middle" >
+                <asp:ContentPlaceHolder ID="HeaderClient" runat="server">
+            </asp:ContentPlaceHolder>
+
+            </div>
+            <div class="column right" >
+                <asp:Button ID="logOut" CssClass="button" runat="server" Text="Log Out" OnClick="logOut_Click" />
+
+            </div>
+
+        </div>
+        <div >
+            <asp:ContentPlaceHolder ID="ClientContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div class="footer" style="background-color:#5D7B9D; color:white; bottom:0;"> 
+            <div class="footersplit footerleft">
+                <div class="footercentered">
+                    <asp:Image  ID="Image2" CssClass="footerimg" ImageUrl="https://www.cavalryassociates.com/wp-content/uploads/2019/09/footer-logo.png" runat="server" />
+
+                </div>
+
+            </div>
+            <div class="footersplit footerright" style="font-size: 17px; font-family: 'Century Gothic';">
+                <div><i class="glyphicon glyphicon-envelope" style="color:white; height: 20px; width: 20px"></i>  info@cavalryassociates.com</div>
+                <div><i class="fa fa-phone" style="color:white; height: 20px; width: 20px"></i>  718-865-9350</div>
+                <div><i class="fa fa-map-marker" style="color:white; height: 20px; width: 20px"></i>  Brooklyn,New York 829 East 15th Street Brooklyn, NY 11230</div>
+                <h1> We’re here to help from 9am – 5pm weekdays</h1>
+
+            </div>
+              <asp:ContentPlaceHolder ID="ClientFooter" runat="server">
+
+              </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+    </body>
+
+</html>
+
+    
+    
+    
+    
+    
+

@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EmployeeMaster.master.cs" Inherits="CavalryP.MasterForm.EmployeeMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+        }
+       
+        * {
+            box-sizing: border-box;
+        }      
+        .column {
+            width:100%;
+            float: left;
+            padding: 10px;
+            height:70px;
+            background-color: #e7e7e7;
+        }
+         
+        .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            overflow: hidden;
+            background-color: #e7e7e7;
+        }
+        .button {
+            background-color: #e7e7e7;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: #5D7B9D;
+            color:white
+        }
+    </style>
+    </head>
+    <body>
+    <form id="form1" runat="server">
+        <div class="row">
+            
+            <div class="column" >
+                <asp:ContentPlaceHolder ID="HeaderClient" runat="server">
+            </asp:ContentPlaceHolder>
+                                <asp:Button ID="logOut" CssClass="button" style="float:right;margin-right:0;" runat="server" Text="Log Out" OnClick="logOut_Click" />
+
+            
+            </div>
+
+        </div>
+        <div >
+            <asp:ContentPlaceHolder ID="ClientContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div class="footer" style="background-color:#5D7B9D; color:white; bottom:0;"> 
+            <asp:ContentPlaceHolder ID="ClientFooter" runat="server">
+
+              </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+    </body>
+
+</html>

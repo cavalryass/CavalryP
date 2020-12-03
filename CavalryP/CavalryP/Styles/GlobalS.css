@@ -1,0 +1,82 @@
+﻿body {
+}
+.topnav {
+    overflow: hidden;
+    background-color: #e7e7e7;
+}
+
+.button {
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #008CBA;
+    }
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+    .topnav .search-container button:hover {
+        background: #ccc;
+    }
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #5D7B9D;
+    color: white;
+    font-size: 30px;
+}
+.regform {
+    width: 800px;
+    background-color: rgba(0,0,0,0.15);
+    margin: auto;
+    color: rgb(93,123,157);
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+}
+.main {
+    background-color: rgba(0,0,0,0.1);
+    width: 800px;
+    margin: auto;
+    border-radius: 15px 15px 15px 15px;
+}
+.readCSS {
+    width: 150px;
+    height: 18px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-color: rgb(93,123,157);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+}
